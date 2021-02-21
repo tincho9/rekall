@@ -20,7 +20,6 @@ from rekall.plugins.windows import kdbgscan
 from rekall.plugins.windows import kpcr
 
 from rekall.plugins.windows import malware
-from rekall.plugins.windows import mimikatz
 from rekall.plugins.windows import misc
 from rekall.plugins.windows import modscan
 from rekall.plugins.windows import modules
@@ -40,6 +39,3 @@ from rekall.plugins.windows import shimcache
 from rekall.plugins.windows import ssdt
 from rekall.plugins.windows import taskmods
 from rekall.plugins.windows import vadinfo
-
-if sys.version_info[0] >= 3 and sys.version_info[1] > 4:
-    from rekall.plugins.windows import pypykatz
