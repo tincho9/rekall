@@ -5290,21 +5290,6 @@
       help: 'An integer reflecting the amount of desired output: 0 = quiet, 10 = noisy.'
   active_modes:
   - mode_windows_memory
-- plugin: Mimikatz
-  name: mimikatz
-  description: |
-    Extract and decrypt passwords from the LSA Security Service.
-  args:
-    dtb:
-      type: IntParser
-      help: The DTB physical address.
-      hidden: true
-    verbosity:
-      type: IntParser
-      default: 1
-      help: 'An integer reflecting the amount of desired output: 0 = quiet, 10 = noisy.'
-  active_modes:
-  - mode_windows_memory
 - plugin: Mls
   name: mls
   description: |
