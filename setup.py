@@ -95,10 +95,9 @@ commands = dict(
 # This requires an exact version to ensure that installing the meta package
 # pulls in tested dependencies.
 install_requires = [
-    "rekall-agent >= 1.7.0rc1, < 1.8",
     "rekall-lib >= 1.7.0rc1, < 1.8",
     "rekall-core >= 1.7.0rc1, < 1.8",
-    "ipython==7.14.0",
+    "ipython==7.16.1",
     
 ]
 
@@ -125,7 +124,7 @@ setup(
             "pyreadline >= 2.0",
         ],
         ':sys_platform!="win32"': [
-            "readline",
+            "gnureadline",
         ],
 
     },

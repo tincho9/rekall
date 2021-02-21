@@ -67,8 +67,6 @@ from rekall_lib.rekall_types import agent
 from rekall_lib.rekall_types import client
 from rekall_lib.rekall_types import resources
 
-from wheel import pep425tags
-
 if six.PY3:
     unicode = str
 
@@ -161,12 +159,6 @@ class UnameImpl(client.Uname):
             release = platform.linux_distribution()[0]  # Ubuntu
             version = platform.linux_distribution()[1]  # 12.04
 
-        # Emulate PEP 425 naming conventions - e.g. cp27-cp27mu-linux_x86_64.
-        pep425tag = "%s%s-%s-%s" % (pep425tags.get_abbr_impl(),
-                                    pep425tags.get_impl_ver(),
-                                    str(pep425tags.get_abi_tag()).lower(),
-                                    pep425tags.get_platform())
-
         return cls.from_keywords(
             session=session,
             system=system,
@@ -176,8 +168,7 @@ class UnameImpl(client.Uname):
             version=version,
             machine=uname[4],              # x86, x86_64
             kernel=kernel,
-            fqdn=fqdn,
-            pep425tag=pep425tag,
+            fqdn=fqdn
         )
 
 
